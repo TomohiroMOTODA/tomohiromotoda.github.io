@@ -338,7 +338,7 @@ h1.page-ttl {
 #page .jumbotron{
     background-color: #f1efff;
     border-bottom: #dddddd;
-    background: url("../img/top.JPG") no-repeat center center;
+    background: url("../img/top.jpg") no-repeat center center;
     background-size:cover;
     border-radius: initial;
 }
