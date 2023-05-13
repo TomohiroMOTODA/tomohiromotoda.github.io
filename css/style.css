@@ -37,9 +37,13 @@
     float:left;
     width: 49.5%;
   }
+  .float-left2{
+    float:left;
+    width: 69.5%;
+  }
   .float-face {
     float:left;
-    width: 27.5%;
+    width: 25.0%;/*27.5%;*/
   }
   .wrap:after{
     display: block;
@@ -184,11 +188,11 @@ h1{
 
 #page-top section{
     border-bottom: 1px solid #e0c7b2;
-    background-color: #fbfbf2;
+    background-color: #e0c7b2; /*#fbfbf2*/
 	padding: 1.5rem 0;
 }
 #page-top section:nth-child(odd){
-    background-color: #e0c7b2;
+    background-color: #fbfbf2; /*#e0c7b2*/ 
 }
 #page-top section .container > h2{
     margin-bottom: 30px;
@@ -198,6 +202,12 @@ h1{
     max-width: 1500px;
 	margin: 0 auto 50px;
 }
+
+#sec_research a{
+    color: #d2691e;/*#ff8c00;*/
+    text-decoration: underline;
+}
+
 #sec1 {
     font-size: 1.1rem;
 }
@@ -338,7 +348,8 @@ h1.page-ttl {
 #page .jumbotron{
     background-color: #f1efff;
     border-bottom: #dddddd;
-    background: url("../img/top.jpg") no-repeat center center;
+    background: url("../img/title.png") no-repeat center center;
+    /*background: url("../img/top.jpg") no-repeat center center;*/
     background-size:cover;
     border-radius: initial;
 }
