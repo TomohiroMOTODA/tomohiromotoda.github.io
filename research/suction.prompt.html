@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SuctionPrompt">
+    <link rel="shortcut icon" href="../favicon/favicon_suctionprompt.ico">
+    <title>SuctionPrompt🧹</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+        a {
+            color: #4169e1;
+        }
+        p {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height:30px;
+            font-size:16px;
+        }
+        body {
+            font:'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            width: 75%;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SuctionPrompt🧹: Visual-assisted Robotic Picking <br>
+        with a Suction Cup Using Vision-Language Models and Facile Hardware Design</h1>
+    <p><a href="https://tomohiromotoda.github.io/" target="_blank">Tomohiro Motoda</a><sup>1</sup>, Takahide Kitamura<sup>1</sup>, Ryo Hanai<sup>1</sup>, Yukiyasu Domae<sup>1</sup></p>
+    <p><sup>1</sup>National Institute of Advanced Industrial Science and Technology (AIST) [<a href="https://unit.aist.go.jp/icps/icps-am/en/" target="_blank">Link</a>]</p>
+
+    <p>
+        [<a href="pdf/SuctionPrompt.pdf" target="_blank"  el="noopener">Paper</a>]
+        [<a href="https://arxiv.org/abs/2410.23640" , target="_blank">ArXiv</a>]
+        <!--[Video (coming soon)]-->
+        [Code (coming soon)]
+        <!--[<a href="https://github.com/Automation-Research-Team/suction_prompt" target="_blank">Code</a>]-->
+    </p>
+</header>
+
+<div class="youtube">
+    <video width="80%" src="video/suction_prompt.mp4" style="display: block; margin: auto;" controls autoplay muted>
+        I am sorry. It seems that this video is not supported at your environment. 
+        <!-- 動画が再生されない時のメッセージ -->
+    </video>
+</div>
+
+<section id="about">
+    <h3 style="text-align: center">Abstract</h3>
+    <p>
+        The development of large language models and vision-language models (VLMs) has resulted in the increasing use of robotic systems in various fields. 
+        However, the effective integration of these models into real-world robotic tasks is a key challenge. 
+        We developed a versatile robotic system called <strong>SuctionPrompt🧹</strong> that utilizes prompting techniques of VLMs combined with 3D detections to perform product-picking tasks in diverse and dynamic environments. 
+        Our method highlights the importance of integrating 3D spatial information with adaptive action planning to enable robots to approach and manipulate objects in novel environments. 
+        In the validation experiments, the system accurately selected suction points 75.4%, and achieved a 65.0% success rate in picking common items. 
+        This study highlights the effectiveness of VLMs in robotic manipulation tasks, even with simple 3D processing. 
+    </p>
+
+    <img src="img/overview.png" style="display: block; margin: auto;" alt="写真" title="概要" width=100%;>
+    <p style="text-align: center">Figure 1. Overview of SuctionPrompt's workflow</p>
+</section>
+
+
+
+<section id="about">
+    <h2>Visual-prompting Robotic Picking with a Scution Cup</h2>
+    <p>
+        Our study introduces <strong>SuctionPrompt🧹</strong>, a robotic manipulation system equipped with a suction-cup-based gripper and guided by Vision-Language Models (VLMs). As shown below (Figure 1), SuctionPrompt leverages zero-shot learning to handle diverse picking tasks, including unstructured environments typical of convenience stores. By integrating RGB-depth (RGB-D) data, this system enables accurate, reliable interaction across varied product shapes and materials.
+    </p>
+
+    
+
+    <img src="img/flow-suctionprompt.png" style="display: block; margin: auto;" alt="写真" title="概要" width=60%;>
+    <p style="text-align: center">Figure 1. Overview of SuctionPrompt's workflow</p>
+</section>
+
+<section id="research">
+    <h2>VLM experiments</h2>
+    <img src="img/vision.png" style="display: block; margin: auto;" alt="写真" title="概要" width=80%;>
+
+    <h2>SuctionPrompt's Hardware and Architecture</h2>
+    <p>To overcome the challenges posed by varying robot hardware, SuctionPrompt incorporates flexible visual prompting via VLMs, 
+        enhancing the robot’s adaptability in different settings. The robot’s workspace setup is partially conveyed through captured images, 
+        influencing VLM performance and prompt effectiveness. The suction gripper hardware was developed specifically for comparative evaluation, 
+        with detailed insights into system configuration. </p>
+
+        
+        <img src="img/exp.png" style="display: block; margin: auto;" alt="写真" title="概要" width=100%;>
+</section>
+
+<section id="contact">
+    <h3>Citing</h3>
+    <textarea id="story" name="story"
+            rows="15" cols="80" disabled>
+@misc{motoda2024suctionprompt,
+    title={SuctionPrompt: Visual-assisted Robotic Picking with a Suction Cup Using Vision-Language Models and Facile Hardware Design}, 
+    author={Tomohiro Motoda and Takahide Kitamura and Ryo Hanai and Yukiyasu Domae},
+    year={2024},
+    eprint={2410.23640},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO},
+    url={https://arxiv.org/abs/2410.23640}, 
+}
+    </textarea>
+</section>
+
+<section id="acknowledgements">
+    <h3>Acknowledgements</h3>
+    <p>This research was conducted with financial support and using the experimental facilities provided by the National Institute of Advanced Industrial Science and Technology (AIST). We express our gratitude for the significant support and assistance provided throughout this study. 
+        We thank Drs. Natsuki Yamanobe and Abdullah Mustafa for their technical contributions and participation in discussions, which have greatly supported this research. </p>
+</section>
+
+<footer>
+    <p>&copy; 2024 AIST-ART All rights reserved.</p>
+</footer>
+
+</body>
+</html>
