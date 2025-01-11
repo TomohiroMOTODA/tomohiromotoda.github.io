@@ -3,31 +3,23 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 <meta charset="UTF-8">
 <title>Home | Tomohiro Motoda</title>
-<!--ファビコンの設定-->
 <link rel="shortcut icon" href="favicon/favicon_16x16.ico">
 <meta name="description" content="Tomohiro Motoda Personal wbsite">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- OGP設定 -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tomohiromotoda.github.io/" />
 <meta property="og:image" content="SNSで表示させたい画像のパス" />
 <meta property="og:title" content="Tomohiro Motoda Personal website" />
 <meta property="og:description" content="元田智大, Homepage" />
-<!-- 検索結果 -->
 <meta name="keywords" content="元田智大, 元田, 智大，MOTODA, motoda, tomohiro">
-<!-- Facebook用設定 -->
 <meta property="fb:app_id" content="facebookのApp ID" />
 <meta property="article:publisher" content="FacebookページのURL">
-<!-- Twitter用設定 -->
-<meta name="twitter:card" content="Twitterカードの種類">
-<meta name="twitter:site" content="@ユーザー名">
-<link rel="canonical" href="あなたのサイトURL">
-<!--<link rel="icon" type="image/png" href="ファビコンのパス">-->
-<!-- スタイルシートはここから -->	
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/queries.css">
+
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="static/css/icon.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVFZ9VYXRM"></script>
@@ -42,180 +34,193 @@
 </head>
 <body id="page-top">
 <!------------------------------------------------------------------------------------------------------------------>
-<header>
-<nav class="navbar navbar-expand-md navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="img/motoda.jpg" alt="Website Name"> Tomohiro MOTODA / Personal Website</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span> </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a href="#sec1" class="nav-link">Profile</a></li>
-                <li class="nav-item"><a href="#sec2" class="nav-link">Publication</a></li>
-                <li class="nav-item"><a href="#sec3" class="nav-link">Education</a></li>
-                <!--<li class="nav-item"><a href="#sec5" class="nav-link">News</a></li>-->
-            </ul>
-        </div>
-     </div>    
-</nav>
-
-
-</header>
 <main>
-<!------------------------------------------------------------------------------------------------------------------>
-  <!--
-  <div class="jumbotron-fluid mb-0">
-    <div class="container d-flex align-items-center">
-        <div>
-            <h1 class="mb-0">Welcome!</h1>
-            <span>Tomohiro MOTODA (元田智大)</span>
-            <a href="contact/index.html" class="btn btn-outline-warning btn-lg text-white rounded-0">Contact</a>
-        </div>
-    </div>
-  </div>
--->
-<!------------------------------------------------------------------------------------------------------------------>
-<section id="sec1">
+    
+<section id="name">
     <div class="container">
-        <div class="wrap">
-          <div class="float-left2">
-            <h3 class="text-center"><strong>Tomohiro MOTODA (元田 智大)</strong> <br>
-                [<a href="https://scholar.google.com/citations?user=5MO4rRUAAAAJ&hl=ja" target="_blank" el="noopener">profile</a>, <a href="https://researchmap.jp/tomohiro.motoda" target="_blank" el="noopener">researchmap</a>, <a href="https://www.youtube.com/channel/UC1rcIcqJ5H8mVE1Qi6AdZEw" target="_blank" el="noopener">YouTube</a>]</h3>
-            <p class="text-center">Researcher, Ph.D. in Engineering, Japan.</p>
-
-            <p>&#128218; <span>2023-present</span>, Research Scientist in the <a href="https://unit.aist.go.jp/icps/icps-am/">Automation Research Team</a>, 
-                Industrial CPS Research Center, 
-                National Insitute of Advanced Industrial Science and Technology (<strong>AIST</strong>) in Odaiba, Tokyo.</p>
-
-            <h3 class="text-center">Contact</h3>
-            <p>
-                &#128231; Email : tomohiro.motoda[at]aist.go.jp (Main) <br>
-                &#128231; Email : motoda.populus14144[at]gmail.com (Gmail) <br>
-                <!--&#128231; Email : motoda[at]hlab.sys.es.osaka-u.ac.jp (Osaka Univ.)-->
-            </p>
-            <!--<p>Please replace [at] to @.</p>-->
-          </div>
-          <div class="float-face">
-            <img src="img/motoda_5th.png" alt="Tomohiro Face">
-        </div>
-        </div>
-        <p class="text-center"><i><u>Last updated on 14 Sep., 2024.</u></i></p>
-    </div><!-- .container -->
+        <table>
+            <tr>
+                <td>
+                    <h3><strong>Tomohiro MOTODA (元田 智大)</strong></h3>
+                    <p>Researcher, Ph.D. in Engineering, Japan.</p>            
+                        <p>
+                            I am a research scientist@<a href="https://www.aist.go.jp/index_en.html">AIST</a>(国立研究開発法人産業技術総合研究所) in Odaiba, Tokyo, Japan.                 
+                            My research topic is robotics, manipulation and machine learning (AI robotics). 
+                        </p>
+        
+                        <p>   
+                            <ul class="follow-me">
+                               <li><a href="https://twitter.com/populus_1995"></a></li>
+                                <li><a href="https://www.linkedin.com/in/tomohiro-motoda-0547aa182/"><a></li>
+                                <li><a href="https://www.facebook.com/tomohiro.motoda.3"></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC1rcIcqJ5H8mVE1Qi6AdZEw"></a></li>
+                                <li><a href="https://github.com/TomohiroMOTODA"></a></li>
+                            </ul>
+                            <!-- <p>[<a href="https://scholar.google.com/citations?user=5MO4rRUAAAAJ&hl=ja" target="_blank" el="noopener">profile</a>, <a href="https://researchmap.jp/tomohiro.motoda" target="_blank" el="noopener">researchmap</a>, <a href="https://www.youtube.com/channel/UC1rcIcqJ5H8mVE1Qi6AdZEw" target="_blank" el="noopener">YouTube</a>]</p> -->    
+                        </p>
+                        <p >
+                            <a href="mailto:tomohiro.motoda@aist.go.jp">Email</a> / 
+                            <a href="https://scholar.google.com/citations?user=5MO4rRUAAAAJ&hl=ja" target="_blank" el="noopener">google scholar</a>/ 
+                            <a href="https://researchmap.jp/tomohiro.motoda" target="_blank" el="noopener">research map</a>/
+                            <a href="https://orcid.org/my-orcid?orcid=0000-0003-3339-6147"target="_blank" el="noopener">ORCiD</a>
+                        </p>
+                </td>
+                <td>&nbsp;</td>
+                <td><img src="static/img/motoda_5th.png" width="200" alt="Tomohiro Face"></td>
+            </tr>
+        </table>
+     </div>
 </section>
 <!------------------------------------------------------------------------------------------------------------------>
 
 <section id="sec_research">
     <div class="container">
 
-        <!--<h2 class="text-center">Recent Research</h2>-->
+        <h3>Research</h3>
 
         <div class="wrap">
             <div class="float-left" >
                 <div class="youtube">
-                    <img width="100%" src="img/list_konbini.png" alt="konbini">
+                    <video width="98%" src="research/video/suction_prompt.mp4" alt="suction_prompt" controls autoplay muted>
                 </div>
-                <h4><spam></spam>Convenience Store Dataset for Benchmark</spam></h4>
-                    <p>元田ら，コンビニエンスストアにおける固有の商品の認識のためのデータセット構築と検証．</p> 
-                    <p>Coming soon. </p>
             </div>
             <div class="float-right" >
+                <h4><spam></spam>Prompt-Engineering for Robotic Shelf Picking</spam></h4>
+                    <p>Motoda et al., SuctionPrompt: Visual-assisted Robotic Picking 
+                        with a Suction Cup Using Vision-Language Models and Facile Hardware Design, ArXiv preprint, 2024.</p>
+                        <p>[<a href='research/suction.prompt.html' el="noopener">website</a>] [<a href="https://arxiv.org/abs/2410.23640" target="_blank" el="noopener">preprint</a>]</p>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="float-left" >
                 <div class="youtube">
-                    <video width="100%" src="video/point_picking.mp4" controls autoplay muted>
+                    <img width="90%" src="static/img/list_konbini.png" alt="konbini">
+                </div>
+            </div>
+            <div class="float-right" >
+                <h4><spam></spam>Convenience Store Dataset for Benchmark</spam></h4>
+                    <p>元田ら，コンビニエンスストアにおける固有の商品の認識のためのデータセット構築と検証, 第42回 日本ロボット学会学術講演会, 2024. </p> 
+                    <p>Coming soon. </p>
+            </div>
+        </div>
+        
+        <div class="wrap">
+            <div class="float-left" >
+                <div class="youtube">
+                    <video width="98%" src="static/video/RSJ24_pointclouds.mp4" controls autoplay muted>
+                        I am sorry. It seems that this video is not supported at your environment. 
+                    </video>
+                </div>
+            </div>
+            <div class="float-right">
+                <h4><spam></spam>Robotic manipulation based on Pointclouds</spam></h4>
+                    <p>元田ら，三次元点群からの物体動作予測に基づくロボットマニピュレーションの検討, 第42回 日本ロボット学会学術講演会, 2024. </p> 
+                    <p>Coming soon. </p>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="float-left" >
+                <div class="youtube">
+                    <video width="98%" src="static/video/IROS23_nagato.mp4" controls autoplay muted>
                         I am sorry. It seems that this video is not supported at your environment. 
                         <!-- 動画が再生されない時のメッセージ -->
                     </video>
+                <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
                 </div>
-                <h4><spam></spam>Aim: Robotic manipulation based on Pointclouds</spam></h4>
-                    <p>元田ら，三次元点群からの物体動作予測に基づくロボットマニピュレーションの検討．</p> 
-                    <p>Coming soon. </p>
-            </div>
-        </div>
-
-        <div class="wrap">
-          <div class="float-left" >
-            <div class="youtube">
-                <video width="100%" src="video/iros_submitted_2023_nagato.mp4" controls autoplay muted>
-                    I am sorry. It seems that this video is not supported at your environment. 
-                    <!-- 動画が再生されない時のメッセージ -->
-                 </video>
-              <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-            </div>
-            <h4><spam><a href='research/2023_iros_nagato.html#main' el="noopener">Slide-Support</a></spam></h4>
-                <p>Nagato et al., ``Probabilistic Slide-support Manipulation Planning in Clutter,'' in IROS, 2023. (Accepted)</p>
-                <p>[<a href="https://arxiv.org/abs/2306.12649" target="_blank" el="noopener">paper</a>] [<a href="https://youtu.be/Qyes4hjCP3w" target="_blank" el="noopener">youtube</a>]</p>
             </div>
             <div class="float-right" >
-            <div class="youtube">
-                <video width="100%" src="video/access_demo.mp4" controls autoplay muted>
-                    I am sorry. It seems that this video is not supported at your environment. 
-                    <!-- 動画が再生されない時のメッセージ -->
-                 </video>
-              <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                <h4><spam>Slide-Support</a></spam></h4>
+                    <p>Nagato et al., ``Probabilistic Slide-support Manipulation Planning in Clutter,'' in IROS, 2023. (Accepted)</p>
+                    <p>[<a href='research/slide-support-manipulation.html' el="noopener">website</a>] [<a href="https://arxiv.org/abs/2306.12649" target="_blank" el="noopener">paper</a>] [<a href="https://youtu.be/Qyes4hjCP3w" target="_blank" el="noopener">youtube</a>]</p>
             </div>
-            <h4>Scene Analysis Based on Support Relations</h4>
-                <p>Motoda et al., ``Multi-step Object Extraction Planning from Clutter based on Support Relations,'' IEEE Access, 2023.</p> 
-                <p>[<a href="https://ieeexplore.ieee.org/document/10117592" target="_blank" el="noopener">paper</a>] [<a href="https://youtu.be/NoVPAZl19sI" target="_blank" el="noopener">youtube</a>]</p>
-          </div>
         </div>
 
         <div class="wrap">
-          <div class="float-left" >
-            <div class="youtube">
-                <video width="100%" src="video/video_preceeding_motoda_si.mp4" controls autoplay muted>
-                    I am sorry. It seems that this video is not supported at your environment. 
-                    <!-- 動画が再生されない時のメッセージ -->
-                 </video>
-              <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-            </div>
-            <h4>Shelf Replenishment</h4>
-                <p>Motoda et al., ``Shelf Replenishment Based on Object Arrangement Detection and Collapse Prediction for Bimanual Manipulation,'' MDPI Robotics, 2022. </p>
-                <p>[<a href="https://www.mdpi.com/2218-6581/11/5/104" target="_blank" el="noopener">paper</a>] [youtube]</p>
-          </div>
-
-          <div class="float-right" >
-            <div class="youtube">
-                <video width="100%" src="video/CASE21_0419_VI_fi.mp4" controls autoplay muted>
-                    I am sorry. It seems that this video is not supported at your environment. 
-                    <!-- 動画が再生されない時のメッセージ -->
-                 </video>
-              <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-            </div>
-            <h4><a href='research/bimanual-shelf-picking.html' el="noopener">Bimanual Shelf Picking</a></h4>
-                <p>Motoda et al., ``Bimanual Shelf Picking Planner Based on Collapse Prediction,''<br>
-                in IEEE 17th International Conference on Automation Science and Engineering (CASE), 2021.</p>
-                <p>[<a href="https://ieeexplore.ieee.org/document/9551507" target="_blank" el="noopener">paper</a>] [<a href="https://www.youtube.com/watch?v=HTgmXDSWgPs&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" el="noopener">youtube</a>]</p>
-          </div>
-        </div>
-       
-        <!--<div class="wrap">
-          <div class="float-left" >
-            <div class="youtube">
-                <video width="100%" src="video/SII2020.compressed.mp4" controls autoplay muted>
-                    I am sorry. It seems that this video is not supported at your environment. 
+            <div class="float-left" >
+                <div class="youtube">
+                    <video width="98%" src="static/video/ACCESS24.mp4" controls autoplay muted>
+                        I am sorry. It seems that this video is not supported at your environment. 
+                        <!-- 動画が再生されない時のメッセージ -->
                     </video>
+                <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                </div>
             </div>
-            <h4>Probabilistic Actions on Yamakuzushi [TBA]</h4>
-                    <p>Motoda et al., ``Probabilistic Action/Observation Planning for Playing Yamakuzushi,''<br>in IEEE/SICE International Symposium on System Integrations (SII), 2020. </p>
-          </div>
-          <div class="float-left" >
-            
-          </div>
-        </div>-->
-    </div><!-- .container -->
+            <div class="float-right">
+                <h4>Scene Analysis Based on Support Relations</h4>
+                    <p>Motoda et al., ``Multi-step Object Extraction Planning from Clutter based on Support Relations,'' IEEE Access, 2023.</p> 
+                    <p>[<a href="https://ieeexplore.ieee.org/document/10117592" target="_blank" el="noopener">paper</a>] [<a href="https://youtu.be/NoVPAZl19sI" target="_blank" el="noopener">youtube</a>]</p>        
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="float-left">
+                <div class="youtube">
+                    <video width="98%" src="static/video/SICE-SI21.mp4" controls autoplay muted>
+                        I am sorry. It seems that this video is not supported at your environment. 
+                        <!-- 動画が再生されない時のメッセージ -->
+                    </video>
+                <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                </div>
+            </div>
+            <div class="float-right">
+                <h4>Shelf Replenishment</h4>
+                    <p>Motoda et al., ``Shelf Replenishment Based on Object Arrangement Detection and Collapse Prediction for Bimanual Manipulation,'' MDPI Robotics, 2022. </p>
+                    <p>[<a href="https://www.mdpi.com/2218-6581/11/5/104" target="_blank" el="noopener">paper</a>] [youtube]</p>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="float-left">
+                <div class="youtube">
+                    <video width="98%" src="static/video/CASE21_0419_VI_fi.mp4" controls autoplay muted>
+                        I am sorry. It seems that this video is not supported at your environment. 
+                        <!-- 動画が再生されない時のメッセージ -->
+                        </video>
+                    <!--<iframe src="https://www.youtube.com/embed/WkSRoxzk0EY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                </div>
+            </div>
+            <div class="float-right">
+                <h4>Bimanual Shelf Picking</h4>
+                    <p>Motoda et al., ``Bimanual Shelf Picking Planner Based on Collapse Prediction,''<br>
+                    in IEEE 17th International Conference on Automation Science and Engineering (CASE), 2021.</p>
+                    <p>[<a href='research/bimanual-shelf-picking.html' el="noopener">website</a>] [<a href="https://ieeexplore.ieee.org/document/9551507" target="_blank" el="noopener">paper</a>] [<a href="https://www.youtube.com/watch?v=HTgmXDSWgPs&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" el="noopener">youtube</a>]</p>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="float-left" >
+                <div class="youtube">
+                    <video width="98%" src="static/video/SII20.mp4" controls autoplay muted>
+                        I am sorry. It seems that this video is not supported at your environment. 
+                    </video>
+                </div>
+            </div>
+            <div class="float-right">
+                <h4><spam></spam>Robot Playing Yama-Kuzushi (piece elimination game)</spam></h4>
+                    <p>Motoda et al., Probabilistic Action/Observation Planning for Playing Yamakuzushi, IEEE SII2020.</p>
+                    <p>Motoda et al., Robotic action/observation planning for playing yamakuzushi based on human motion, Transactions of the JSME (in Japanese), 2020.</p> 
+                    [<a href="https://www.jstage.jst.go.jp/article/transjsme/86/892/86_20-00146/_article/-char/ja" target="_blank" el="noopener">paper</a>]
+                </div>
+        </div>
+        
+    </div>
 </section>
 <!------------------------------------------------------------------------------------------------------------------>
 
 <section id="sec2">
     <div class="container">
 
-        <h2 class="text-center">Publications</h2>
+        <h2>Publications</h2>
             <p>
               <h4>Journal Articles</h4>
                 <ol>
                 <li>
-                    <strong>元田 智大</strong>, 万 偉偉, 原田研介.<br>
-                    ``ヒトの行動を規範とした山崩しゲームに対するロボットの観測・操り行動計画,''<br>
-                    日本機械学会論文集, Vol. 86, no. 892, 2020. (Refereed) [<a href="https://www.jstage.jst.go.jp/article/transjsme/86/892/86_20-00146/_article/-char/ja" target="_blank" el="noopener">paper</a>]</li>
+                    <strong>T. Motoda</strong>,  W. Wan, and K. Harada.<br>
+                    ``Robotic action/observation planning for playing yamakuzushi based on human motion,''<br>
+                    Transactions of the JSME (in Japanese), Vol. 86, no. 892, 2020. (Refereed) [<a href="https://www.jstage.jst.go.jp/article/transjsme/86/892/86_20-00146/_article/-char/ja" target="_blank" el="noopener">paper</a>]</li>
                 <li>
                     <strong>T. Motoda</strong>, D. Petit, T. Nishi, K. Nagata, W. Wan, and K. Harada. <br>
                     ``Shelf Replenishment Based on Object Arrangement Detection and Collapse Prediction for Bimanual Manipulation. ''<br>
@@ -259,8 +264,17 @@
                     </li>
 
                     <li>Shusei Nagato, <strong>Tomohiro Motoda</strong>, Takao Nishi, Petit Damien, Takuya Kiyokawa, Weiwei Wan, Kensuke Harada.<br>
-                        ''Probabilistic Slide-support Manipulation Planning in Clutter,''<br>
-                        In Proceeding of 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023. [<a href="https://arxiv.org/abs/2306.12649" target="_blank" el="enoopener">paper</a>, <a href="pdf/IROS23_Poster_2750.pdf" target="_blank" el="noopener">poster</a>]
+                        ``Probabilistic Slide-support Manipulation Planning in Clutter,''<br>
+                        In Proceeding of 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023. [<a href="https://arxiv.org/abs/2306.12649" target="_blank" el="enoopener">paper</a>, <a href="static/pdf/IROS23_Poster_2750.pdf" target="_blank" el="noopener">poster</a>]
+                    </li>
+                    <li>Jose Alfredo Garcia-Alvarado, Floris Marc Arden Erich, <strong>Tomohiro Motoda</strong>, Yukiyasu Domae, and Ixchel Georgina Ramirez-Alpizar.<br>
+                        ``Foundation Models Need to Be Culturally Fine-Tuned,''<br>
+                        In Proceeding of IEEE/SICE International Symposium on System Integrations (SII 2025), 2025.  
+                    </li>
+                    <li>
+                        Muhammad Angga Muttaqien, <strong>Tomohiro Motoda</strong>, Ryo Hanai, and Yukiyasu Domae, <br>
+                        ``Attention-Guided Integration of CLIP and SAM for Precise Object Masking in Robotic Manipulation,''<br>
+                        In Proceeding of IEEE/SICE International Symposium on System Integrations (SII 2025), 2025. [preprint(comming soon)] 
                     </li>
                 </ol>
             </p>
@@ -270,7 +284,7 @@
                     <li>
                         <strong>元田智大</strong>, 原田研介:<br>
                         ``確率モデルによるバラ積み物体の認識と操りのための行動計画,''<br>
-                        第18回 計測自動制御学会システムインテグレーション部門講演会, 3A6-02, 仙台, 2017年12月. [<a href="pdf/si2017_motoda_poster.pdf" target="_blank" el="noopener">pdf</a>]</li>
+                        第18回 計測自動制御学会システムインテグレーション部門講演会, 3A6-02, 仙台, 2017年12月. [<a href="static/pdf/si2017_motoda_poster.pdf" target="_blank" el="noopener">pdf</a>]</li>
                     <li>
                         <strong>元田智大</strong>，万偉偉，原田研介:<br>``ばら積み物体の認識と操りのための確率的行動計画の検証,'' <br>
                         第36回 日本ロボット学会学術講演会, 1G2-05, 春日井, 2018年9月．</li>
@@ -284,11 +298,11 @@
                     <li>
                         <strong>元田智大</strong>, 万偉偉, 原田研介:<br>
                         ''ロボットによる将棋崩しの実現に向けた操り・観測の確率的計画手法の検証,''<br>
-                        第20回 計測自動制御学会システムインテグレーション部門講演会, 3E2-09, 高松, 2019年12月. [<a href="pdf/si2019_motoda_poster.pdf" target="_blank" el="noopener">pdf</a>]</li>
+                        第20回 計測自動制御学会システムインテグレーション部門講演会, 3E2-09, 高松, 2019年12月. [<a href="static/pdf/si2019_motoda_poster.pdf" target="_blank" el="noopener">pdf</a>]</li>
                     <li>
                         <strong>元田智大</strong>, 万偉偉, Damien Petit, 原田研介:<br>
                         ``双腕ロボットによるバラ積みされた対象物の引き出し動作計画,'' <br>
-                        第21回 計測自動制御学会システムインテグレーション部門講演会, 3D3-07, 2020年12月. [<a href="pdf/si2020_motoda_poster.pdf" target="_blank" el="noopener">pdf</a>]</li>
+                        第21回 計測自動制御学会システムインテグレーション部門講演会, 3D3-07, 2020年12月. [<a href="static/pdf/si2020_motoda_poster.pdf" target="_blank" el="noopener">pdf</a>]</li>
                     <li>
                         長門秀征, <strong>元田智大</strong>, 小山佳祐, 万偉偉, 原田研介:<br>
                         ``複雑な環境下における目標物体の取り出し動作計画,'' <br>
@@ -365,9 +379,9 @@
                     <li>
                         [学内] <span>システム科学領域賞</span> (令和元年度), 大阪大学大学院システム創成専攻システム科学領域, 2020．</li>
                     <li>
-                        <span>Young Award (IROS, CASE2021)</span>, IEEE Robotics and Automation Society Japan Joint Chapter, 2021. [<a href='pdf/IEEE_JapanJoint_YoungAward.PDF'  target="_blank" el="noopener">pdf</a>, <a href="https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2021.html" target="_blank" el="noopener">link</a>]</li>
+                        <span>Young Award (IROS, CASE2021)</span>, IEEE Robotics and Automation Society Japan Joint Chapter, 2021. [<a href='static/pdf/IEEE_JapanJoint_YoungAward.PDF'  target="_blank" el="noopener">pdf</a>, <a href="https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2021.html" target="_blank" el="noopener">link</a>]</li>
                     <li>
-                        <span>優秀講演賞</span>, 第22回 計測自動制御学会システムインテグレーション部門講演会, 2021．[<a href='pdf/si2021_motoda_award.PDF' target="_blank" el="noopener">pdf</a>]</li>
+                        <span>優秀講演賞</span>, 第22回 計測自動制御学会システムインテグレーション部門講演会, 2021．[<a href='static/pdf/si2021_motoda_award.PDF' target="_blank" el="noopener">pdf</a>]</li>
                     </li>
                 </ol>
             </p>
@@ -378,6 +392,18 @@
                       </li>
                     </ol>
             </p>
+
+            <p>
+                <h4>Media</h4>
+                    <ol>
+                        <li>[取材] 大規模言語モデルはロボットをどう変えるか, 日経クロステック, 2024.09.17掲載, 
+                            URL: <a href="https://xtech.nikkei.com/atcl/nxt/column/18/02911/?i_cid=nbpnxt_sied_child">https://xtech.nikkei.com/atcl/nxt/column/18/02911/?i_cid=nbpnxt_sied_child</a>.
+                        </li>
+                        <li>[Portfolio] A robotic foundation model for production, nature research custom media, 2024.09.18, 
+                            URL: <a href="https://www.nature.com/articles/d42473-024-00203-2">https://www.nature.com/articles/d42473-024-00203-2</a>.
+                        </li>
+                     </oi>
+             </p>
       
 <!-- .row -->
 
@@ -386,7 +412,7 @@
 <!------------------------------------------------------------------------------------------------------------------>
 <section id="sec3">
 <div class="container">
-        <h2 class="text-center">Educational Activities</h2>
+        <h2>Educational Activities</h2>
 
         <h4>TA</h4>
         <ol>
@@ -409,7 +435,7 @@
 
 <section id="sec3">
 <div class="container">
-        <h2 class="text-center">Internship</h2>
+        <h2>Internship</h2>
             <ol>
                 <li>Dec. 2021 – Mar. 2022, <strong>AI Cube Inc.</strong> [<a href="https://www.ai3cube.co.jp/">link</a>], Tokyo, Japan. </li>
             </ol>
@@ -418,8 +444,7 @@
 
 <section id="sec3">
 <div class="container">
-        <h2 class="text-center">Short Bio. </h2>
-
+        <h2>CV</h2>
         <p>
             &#128218; <span>2023-present</span>, Research Scientist in the Automation Research Team, Industrial CPS Research Center, National Insitute of Advanced Industrial Science and Technology in Odaiba, Tokyo.<br><br>
             &#128104;&#8205;&#127891; <span>2020-2023</span>, Ph.D. student, Osaka University.<br>
@@ -429,10 +454,6 @@
             &#128104;&#8205;&#127891; <span>2014-2018</span>, Undergraduate student, Osaka University.<br>
             &#128104;&#8205;&#127891; <span>2011-2014</span>, High school student, Mikunigaoka High School (Osaka).
         </p>
-
-        <p>Tomohiro MOTODA is a research scientist in in the Automation Research Team, Industrial CPS Research Center, National Insitute of Advanced Industrial Science and Technology in Odaiba, Tokyo. </p>
-        <p>I got Ph.D., M.Eng., and B.Eng. in Osaka University, Toyonaka. My research topic is robotics, manipulation and machine learning (AI robotics). </p>
-        <p>I have skills in languages as Japanese (native), English (intermediate), C, C++ and Python. </p>
         
         <p>
             <ol>
@@ -447,26 +468,9 @@
         </p>
 </section>
 
-<!------------------------------------------------------------------------------------------------------------------>
-<!------------------------------------------------------------------------------------------------------------------>
-<!------------------------------------------------------------------------------------------------------------------>
 </main>
 
 <footer id="footer">
-    <div class="container py-5">
-        <div id="footer-contents" class="row mb-5">
-        </div><!-- .row -->
-       <div id="footer-banner" class="container">
-            <div class="row">
-                <div class="text-center col-md-4 mb-2">
-                    <a href="https://originricefield.web.fc2.com/" class="d-inline-block" target="_blank">
-                    <img src="img/banner_site2.jpg" alt="バナー2">
-                    </a>
-                </div>
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-
-    </div><!-- .container -->
     <div id="copyright">
         <p class="text-center mb-0 pt-3 pb-3">&copy;&ensp;Motoda Homepage All Rights Reserved.</p>
     </div><!-- .container-fluid -->
