@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>BICT</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -45,35 +45,43 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">BICT: Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=5MO4rRUAAAAJ" target="_blank">Tomohiro Motoda</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  Ryo Hanai,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  Ryoichi Nakajo,</span>
+                  </span>
+                  <span class="author-block">
+                  Masaki Murooka,</span>
+                  </span>
+                  <span class="author-block">
+                  Floris Erich,</span>
+                  </span>
+                  <span class="author-block">
+                  Yukiyasu Domae
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">National Institute of Advanced Industrial Science and Technology
+                      (AIST)<br>Under Review</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2503.13916" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,7 +90,7 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Supplementary PDF link
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -91,7 +99,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -100,13 +108,13 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (Comming soon)</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2503.13916" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -127,12 +135,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4"
-        type="video/mp4"> -->
-        <iframe width="600" height="315" src="https://www.youtube.com/embed/HTgmXDSWgPs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </video>
+      <img src="static/img/2025-arXiv-top.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2>
@@ -149,7 +152,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Robots that can operate autonomously in a human living environment are necessary to have the ability to handle various tasks flexibly. One crucial element is coordinated bimanual movements that enable functions that are difficult to perform with one hand alone. In recent years, learning-based models that focus on the possibilities of bimanual movements have been proposed. However, the high degree of freedom of the robot makes it challenging to reason about control, and the left and right robot arms need to adjust their actions depending on the situation, making it difficult to realize more dexterous tasks. To address the issue, we focus on coordination and efficiency between both arms, particularly for synchronized actions. Therefore, we propose a novel imitation learning architecture that predicts cooperative actions. We differentiate the architecture for both arms and add an intermediate encoder layer, Inter-Arm Coordinated transformer Encoder (IACE), that facilitates synchronization and temporal alignment to ensure smooth and coordinated actions. To verify the effectiveness of our architectures, we perform distinctive bimanual tasks. The experimental results showed that our model demonstrated a high success rate for comparison and suggested a suitable architecture for the policy learning of bimanual manipulation. 
           </p>
         </div>
       </div>
@@ -157,6 +160,33 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-4">Inter-Arm Coordination with Transformers</h2>
+      <img src="static/img/dummy.png" alt="MY ALT TEXT"/>
+        <p>
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        </p>
+    </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-4">Comparison of ``Encoders-Decoders'' Architectures</h2>
+      <img src="static/img/dummy.png" alt="MY ALT TEXT"/>
+        <p>
+        Aliquam vitae elit ullamcorper 'tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        </p>
+    </h2>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Image carousel -->
@@ -198,54 +228,30 @@
 </section>
 <!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3">Experiments</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
+            <source src="static/video/.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <source src="static/video/.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
+            <source src="static/video/.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -255,12 +261,7 @@
 </section>
 <!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
+<!-- Paper poster
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
@@ -272,14 +273,22 @@
       </div>
     </div>
   </section>
-<!--End paper poster -->
+End paper poster -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{motoda2025learningbimanualmanipulationaction,
+        title={Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers}, 
+        author={Tomohiro Motoda and Ryo Hanai and Ryoichi Nakajo and Masaki Murooka and Floris Erich and Yukiyasu Domae},
+        year={2025},
+        eprint={2503.13916},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO},
+        url={https://arxiv.org/abs/2503.13916}, 
+  }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
