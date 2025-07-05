@@ -1,4 +1,3 @@
-
 /* 特大デバイス（ワイド・デスクトップ, 1200px 以上）
 ==============================================*/
 @media screen and (min-width: 1200px) {
@@ -60,7 +59,9 @@ h1{
     font-size: 2rem;
 }    
 main .btn{
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
 }
     #footer #footer-contents > div:first-child {
     border-right: none !important;

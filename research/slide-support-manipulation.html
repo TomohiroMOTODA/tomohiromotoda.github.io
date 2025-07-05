@@ -3,121 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SuctionPrompt">
-    <link rel="shortcut icon" href="../favicon/favicon_suctionprompt.ico">
-    <title>Slide-Support</title>
+    <meta name="description" content="Probabilistic Slide-support Manipulation Planning in Clutter">
+    <link rel="shortcut icon" href="../favicon/favicon_16x16.ico">
+    <title>Slide-Support | Tomohiro Motoda</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
-        a {
-            color: #4169e1;
-        }
-        p {
-            font-family: 'Noto Sans JP', sans-serif;
-            line-height:30px;
-            font-size:16px;
-        }
-        body {
-            font:'Noto Sans JP', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            color: var(--text-light);
+            padding: var(--spacing-3xl) 0;
             text-align: center;
         }
-        nav {
+        
+        .project-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .project-authors {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+        
+        .project-authors a {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .project-links .btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .project-links .btn:hover {
+            background-color: var(--text-light);
+            color: var(--primary-color);
+            border-color: var(--text-light);
+        }
+        
+        .video-container {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-2xl) 0;
             text-align: center;
-            margin-top: 1rem;
         }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
         }
-        section {
-            padding: 20px;
-            background-color: white;
-            margin: 20px auto;
-            width: 75%;
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .project-section {
+            background-color: var(--bg-primary);
+            padding: var(--spacing-2xl) 0;
+        }
+        
+        .project-section:nth-child(even) {
+            background-color: var(--bg-secondary);
+        }
+        
+        .section-content {
             max-width: 1000px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
         }
-        footer {
+        
+        .section-title {
             text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            margin-top: 20px;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xl);
+            font-size: 2rem;
+        }
+        
+        .abstract-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .content-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .content-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            text-align: justify;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: var(--spacing-xl);
+            right: var(--spacing-xl);
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-fast);
+            z-index: 1000;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 768px) {
+            .project-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-links .btn {
+                width: 200px;
+                justify-content: center;
+            }
         }
     </style>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVFZ9VYXRM"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RVFZ9VYXRM');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RVFZ9VYXRM');
     </script>
 </head>
-    
-<header>
-    <h1>Probabilistic Slide-support Manipulation Planning in Clutter</h1>
-    <p><a href="https://nagato710.github.io/profile/">Shusei Nagato</a>, <a href="https://tomohiromotoda.github.io/" target="_blank">Tomohiro Motoda</a>, Takao Nishi, Petit Damien, 
-        <br>Takuya Kiyokawa, Weiwei Wan, and Kensuke Harada, 
-        <br>IEEE IROS2023</p>
 
-    <p>
-        <span>[<a href="https://arxiv.org/abs/2306.12649" target="_blank" el="enoopener">ArXiv</a>]</span>
-        <span>[<a href="https://www.youtube.com/watch?v=Qyes4hjCP3w&feature=youtu.be" target="_blank" el="noopener">YouTube</a>]</span>
-    </p>
-</header>
+<body>
+    <header class="project-header">
+        <div class="container">
+            <h1 class="project-title">Probabilistic Slide-support Manipulation Planning in Clutter</h1>
+            <div class="project-authors">
+                <a href="https://nagato710.github.io/profile/">Shusei Nagato</a>, 
+                <a href="https://tomohiromotoda.github.io/" target="_blank">Tomohiro Motoda</a>, 
+                Takao Nishi, Petit Damien,<br>
+                Takuya Kiyokawa, Weiwei Wan, and Kensuke Harada<br>
+                <strong>IEEE IROS 2023</strong>
+            </div>
+            
+            <div class="project-links">
+                <a href="https://arxiv.org/abs/2306.12649" target="_blank" rel="noopener" class="btn btn-sm">
+                    <i class="fas fa-file-pdf"></i> ArXiv
+                </a>
+                <a href="https://www.youtube.com/watch?v=Qyes4hjCP3w" target="_blank" rel="noopener" class="btn btn-sm">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="../" class="btn btn-sm">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
 
-<div class="youtube" style="text-align: center">
-    <br>
-    <iframe width="600" height="315" src="https://www.youtube.com/embed/Qyes4hjCP3w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+    <section class="video-container">
+        <div class="container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Qyes4hjCP3w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-    <h3 style="text-align: center">Abstract</h3>
-    <p>
-        To safely and efficiently extract an object from the clutter, 
-        this paper presents a bimanual manipulation planner in which one hand of the robot is used 
-        to slide the target object out of the clutter while the other hand is used 
-        to support the surrounding objects to prevent the clutter from collapsing.
-    </p>
-</section>
+    <section class="project-section">
+        <div class="section-content">
+            <h2 class="section-title">Abstract</h2>
+            <p class="abstract-text">
+                To safely and efficiently extract an object from the clutter, 
+                this paper presents a bimanual manipulation planner in which one hand of the robot is used 
+                to slide the target object out of the clutter while the other hand is used 
+                to support the surrounding objects to prevent the clutter from collapsing.
+            </p>
+        </div>
+    </section>
 
-    <body id="page">
-        <article>
-            <section id="main">
-                    <div class="container" style="text-align: center">
-                    <div style="text-align: center">
-                        <p>
-                            Our method uses a neural network to predict the physical phenomena of the clutter when the target object is moved. 
-                            We generate the most efficient action based on the Monte Carlo tree search.  
-                        </p>
-                        <img src="static/img/2023-iros-top.png" alt="top image"  width=98%;>
-                        
-                    </div>
+    <section class="project-section">
+        <div class="section-content">
+            <p class="content-text">
+                Our method uses a neural network to predict the physical phenomena of the clutter when the target object is moved. 
+                We generate the most efficient action based on the Monte Carlo tree search.
+            </p>
+            <img src="static/img/2023-iros-top.png" alt="Method Overview" class="content-image">
+        </div>
+    </section>
 
-                    <br> 
+    <section class="project-section">
+        <div class="section-content">
+            <p class="content-text">
+                The grasping and sliding actions are planned to minimize the number of motion sequences to pick the target object.
+                Experiments with a real bimanual robot confirmed that the robot could retrieve the target object, 
+                reducing the total number of motion sequences and improving safety.
+            </p>
+            <img src="static/img/2023-iros-exp.png" alt="Experimental Results" class="content-image">
+        </div>
+    </section>
 
-                    <div style="text-align: center">
-                        <p>
-                            The grasping and sliding actions are planned to minimize the number of motion sequences to pick the target object.
-                            Experiments with a real bimanual robot confirmed that the robot could retrieve the target object, 
-                            reducing the total number of motion sequences and improving safety.
-                        </p>
-                        <img src="static/img/2023-iros-exp.png" alt="top image"  width=98%;>             
-                    </div>
-                </section>
-        </article>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tomohiro Motoda. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <footer>
-            <p>&copy; 2024 Tomohiro Motoda All rights reserved.</p>
-        </footer>
-    </body>
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Back to top functionality
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.opacity = '1';
+            } else {
+                backToTop.style.opacity = '0';
+            }
+        });
+    </script>
+</body>
 </html>

@@ -1,287 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners -->
-  <meta name="description" content="BICT: Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers. A novel imitation learning architecture for coordinated bimanual robotic manipulation using transformers.">
-  <meta property="og:title" content="BICT: Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers"/>
-  <meta property="og:description" content="We propose BICT, a novel imitation learning architecture that enables robots to perform dexterous bimanual manipulation by leveraging action chunking and inter-arm coordination with transformers. Our approach achieves high success rates on challenging tasks."/>
-  <meta property="og:url" content="https://tomohiromotoda.github.io/research/bict-robotics.html"/>
-  <meta property="og:image" content="static/img/2025-arXiv-top.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-  <meta name="twitter:title" content="Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers">
-  <meta name="twitter:description" content="We propose BICT, a novel imitation learning architecture that enables robots to perform dexterous bimanual manipulation by leveraging action chunking and inter-arm coordination with transformers. Our approach achieves high success rates on challenging tasks.">
-  <meta name="twitter:image" content="static/img/2025-arXiv-top.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="bimanual manipulation, transformers, imitation learning, robotics, action chunking, inter-arm coordination">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>BICT: Learning Bimanual Manipulation</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
+  
+  <!-- Meta tags for social media -->
+  <meta name="description" content="BICT: Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers. A novel imitation learning architecture for coordinated bimanual robotic manipulation.">
+  <meta property="og:title" content="BICT: Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers"/>
+  <meta property="og:description" content="We propose BICT, a novel imitation learning architecture that enables robots to perform dexterous bimanual manipulation by leveraging action chunking and inter-arm coordination with transformers."/>
+  <meta property="og:url" content="https://tomohiromotoda.github.io/research/bict-robotics.html"/>
+  <meta property="og:image" content="static/img/2025-arXiv-top.png" />
+  
+  <!-- Stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
 </head>
 <body>
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers</h1>
+            <h1 class="title is-2 publication-title">
+              Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers
+            </h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://tomohiromotoda.github.io/" target="_blank">Tomohiro Motoda</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  Ryo Hanai,</span>
-                  <span class="author-block">
-                  Ryoichi Nakajo,</span>
-                  <span class="author-block">
-                  Masaki Murooka,</span>
-                  <span class="author-block">
-                  Floris Erich,</span>
-                  <span class="author-block">
-                  Yukiyasu Domae
-                  </span>
-                  </div>
+                <a href="https://tomohiromotoda.github.io/" target="_blank">Tomohiro Motoda</a><sup>*</sup>,
+              </span>
+              <span class="author-block">Ryo Hanai,</span>
+              <span class="author-block">Ryoichi Nakajo,</span>
+              <span class="author-block">Masaki Murooka,</span>
+              <span class="author-block">Floris Erich,</span>
+              <span class="author-block">Yukiyasu Domae</span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">National Institute of Advanced Industrial Science and Technology (AIST)<br>Under Review</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                National Institute of Advanced Industrial Science and Technology (AIST)<br>
+                <em>Under Review</em>
+              </span>
+              <span class="eql-cntrb">
+                <small><br><sup>*</sup>Corresponding Author</small>
+              </span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2503.13916" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code (Coming soon)</span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2503.13916" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2503.13916" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://github.com/YOUR_REPO_HERE" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.13916" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+  <!-- Teaser Section -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/img/2025-arXiv-top.png" alt="BICT Overview" class="teaser-image"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>BICT</strong> learns coordinated bimanual manipulation through action chunking and inter-arm coordination with transformers, enabling robots to perform dexterous tasks requiring synchronized dual-arm movements.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Robots that can operate autonomously in a human living environment are necessary to have the ability to handle various tasks flexibly. One crucial element is coordinated bimanual movements that enable functions that are difficult to perform with one hand alone. In recent years, learning-based models that focus on the possibilities of bimanual movements have been proposed. However, the high degree of freedom of the robot makes it challenging to reason about control, and the left and right robot arms need to adjust their actions depending on the situation, making it difficult to realize more dexterous tasks. To address the issue, we focus on coordination and efficiency between both arms, particularly for synchronized actions. Therefore, we propose a novel imitation learning architecture that predicts cooperative actions. We differentiate the architecture for both arms and add an intermediate encoder layer, Inter-Arm Coordinated transformer Encoder (IACE), that facilitates synchronization and temporal alignment to ensure smooth and coordinated actions. To verify the effectiveness of our architectures, we perform distinctive bimanual tasks. The experimental results showed that our model demonstrated a high success rate for comparison and suggested a suitable architecture for the policy learning of bimanual manipulation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experimental Results Section -->
+  <section class="section hero is-small is-light">
     <div class="hero-body">
-      <img src="./static/img/2025-arXiv-top.png" alt="BICT Overview"/>
-      <h2 class="subtitle has-text-centered">
-        <strong>BICT</strong> learns coordinated bimanual manipulation through action chunking and inter-arm coordination with transformers, enabling robots to perform dexterous tasks requiring synchronized dual-arm movements.
-      </h2>
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="has-text-centered">
+          <img src="static/img/2025-arXiv-result.png" alt="Experimental Results" class="results-image"/>
+        </div>
+        <p class="has-text-justified">
+          Our experimental evaluation demonstrates the effectiveness of BICT across various bimanual manipulation tasks, showing significant improvements in success rates compared to baseline methods.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Robots that can operate autonomously in a human living environment are necessary to have the ability to handle various tasks flexibly. One crucial element is coordinated bimanual movements that enable functions that are difficult to perform with one hand alone. In recent years, learning-based models that focus on the possibilities of bimanual movements have been proposed. However, the high degree of freedom of the robot makes it challenging to reason about control, and the left and right robot arms need to adjust their actions depending on the situation, making it difficult to realize more dexterous tasks. To address the issue, we focus on coordination and efficiency between both arms, particularly for synchronized actions. Therefore, we propose a novel imitation learning architecture that predicts cooperative actions. We differentiate the architecture for both arms and add an intermediate encoder layer, Inter-Arm Coordinated transformer Encoder (IACE), that facilitates synchronization and temporal alignment to ensure smooth and coordinated actions. To verify the effectiveness of our architectures, we perform distinctive bimanual tasks. The experimental results showed that our model demonstrated a high success rate for comparison and suggested a suitable architecture for the policy learning of bimanual manipulation. 
-          </p>
+  <!-- Video Results Sections -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Single Decoder Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/single_lift_board.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/single_lift_towel.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/single_open_lid.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/single_open_toolbox.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Architecture overview -->
-<!-- <section class="section hero is-small is-light">
-  <div class="hero-body">
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Split Decoders Results</h2>
+        <div class="carousel results-carousel">
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/split_lift_board.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/split_lift_towel.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/split_open_lid.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="static/video/split_open_toolbox.compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation Section -->
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title is-3">Architecture Overview</h2>
-      <div class="has-text-centered">
-        <img src="./static/img/" alt="BICT Architecture" title="BICT Architecture Overview" width="100%" style="max-width: 900px;">
-      </div>
-      <p class="has-text-justified">
-        Our proposed BICT architecture features an Inter-Arm Coordinated transformer Encoder (IACE) that enables effective coordination between left and right arms. The architecture supports both single decoder and split decoders configurations for different coordination requirements.
-      </p>
-    </div>
-  </div>
-</section> -->
-
-<!-- Experimental results -->
-<section class="section hero is-small is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop content">
-      <h2 class="title is-3">Experimental Results</h2>
-      <div class="has-text-centered">
-        <img src="static/img/2025-arXiv-result.png" alt="Experimental Results" title="Robotic Experiments Results" width="100%" style="max-width: 900px;">
-      </div>
-      <p class="has-text-justified">
-        Our experimental evaluation demonstrates the effectiveness of BICT across various bimanual manipulation tasks, showing significant improvements in success rates compared to baseline methods.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Single Decoder Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- ...existing video items... -->
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/single_lift_board.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/single_lift_towel.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/single_open_lid.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/single_open_toolbox.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/single_lift_board.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Split Decoders Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- ...existing video items... -->
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/single_lift_board.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/split_lift_towel.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/split_open_lid.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/split_open_toolbox.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/video/split_lift_board.compressed.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{motoda2025learningbimanualmanipulationaction,
-      title={Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers}, 
-      author={Tomohiro Motoda and Ryo Hanai and Ryoichi Nakajo and Masaki Murooka and Floris Erich and Yukiyasu Domae},
-      year={2025},
-      eprint={2503.13916},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2503.13916}, 
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{motoda2025learningbimanualmanipulationaction,
+  title={Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers}, 
+  author={Tomohiro Motoda and Ryo Hanai and Ryoichi Nakajo and Masaki Murooka and Floris Erich and Yukiyasu Domae},
+  year={2025},
+  eprint={2503.13916},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2503.13916}, 
 }</code></pre>
-  </div>
-</section>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. You are free to borrow the source code, we just ask that you link back to this page in the footer.
+            </p>
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </body>
 </html>
