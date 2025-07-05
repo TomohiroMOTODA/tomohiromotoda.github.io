@@ -2,27 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- Meta tags for social media banners -->
+  <meta name="description" content="SuctionPrompt: Visual-assisted Robotic Picking with a Suction Cup Using Vision-Language Models and Facile Hardware Design">
+  <meta property="og:title" content="SuctionPrompt🧹: Visual-assisted Robotic Picking with Vision-Language Models"/>
+  <meta property="og:description" content="A versatile robotic system that utilizes VLMs with 3D detections for product-picking tasks in diverse environments"/>
+  <meta property="og:url" content="https://tomohiromotoda.github.io/research/suction.prompt.html"/>
+  <meta property="og:image" content="static/img/overview.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="SuctionPrompt🧹: Visual-assisted Robotic Picking">
+  <meta name="twitter:description" content="A versatile robotic system that utilizes VLMs with 3D detections for product-picking tasks">
+  <meta name="twitter:image" content="static/img/overview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="robotics, vision-language models, robotic manipulation, suction cup, VLM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
   <title>SuctionPrompt🧹</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -45,7 +39,6 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
-
 
   <section class="hero">
     <div class="hero-body">
@@ -74,7 +67,7 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+                      <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="static/pdf/SuctionPrompt.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -156,87 +149,70 @@
 <!-- End paper abstract -->
 
 <!-- overview block -->
-<section class="hero is-small">
+<section class="section hero is-small is-light">
   <div class="hero-body">
     <div class="container is-max-desktop content">
-      <h2 class="title is-4">System Overview</h2>
-      <img src="./static/img/overview.png" style="display: block; margin: auto;" alt="写真" title="概要" width=100%;>
-        <!-- <p>
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-        </p> -->
-    </h2>
+      <h2 class="title is-3">System Overview</h2>
+      <div class="has-text-centered">
+        <img src="./static/img/overview.png" alt="System Overview" title="System Overview" width="100%" style="max-width: 900px;">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="hero is-small is-light">
+<section class="section hero is-small is-light">
   <div class="hero-body">
     <div class="container is-max-desktop content">
-      <h2 class="title is-4">Flowchart</h2>
-      <img src="./static/img/flow-suctionprompt.png" width=80% style="display: block; margin: auto;" alt="写真" title="概要" width=100%;>
-        <!-- <p>
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-        </p> -->
-    </h2>
+      <h2 class="title is-3">Methodology</h2>
+      <div class="has-text-centered">
+        <img src="./static/img/flow-suctionprompt.png" alt="Flowchart" title="Methodology Flowchart" width="80%" style="max-width: 700px;">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="hero is-small">
+<section class="section hero is-small is-light">
   <div class="hero-body">
     <div class="container is-max-desktop content">
-      <h2 class="title is-4">Visual Results</h2>
-      <img src="./static/img/vision.png" style="display: block; margin: auto;" alt="写真" title="概要" width=100%;>
-        <!-- <p>
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-        </p> -->
-    </h2>
+      <h2 class="title is-3">Visual Results</h2>
+      <div class="has-text-centered">
+        <img src="./static/img/vision.png" alt="Visual Results" title="Visual Results" width="100%" style="max-width: 900px;">
+      </div>
     </div>
   </div>
 </section>
-<!-- End overview block -->
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{motoda2024suctionprompt,
-        title={SuctionPrompt: Visual-assisted Robotic Picking with a Suction Cup Using Vision-Language Models and Facile Hardware Design}, 
-        author={Tomohiro Motoda and Takahide Kitamura and Ryo Hanai and Yukiyasu Domae},
-        year={2024},
-        eprint={2410.23640},
-        archivePrefix={arXiv},
-        primaryClass={cs.RO},
-        url={https://arxiv.org/abs/2410.23640}, 
-    }</code></pre>
-    </div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{motoda2024suctionprompt,
+      title={SuctionPrompt: Visual-assisted Robotic Picking with a Suction Cup Using Vision-Language Models and Facile Hardware Design}, 
+      author={Tomohiro Motoda and Takahide Kitamura and Ryo Hanai and Yukiyasu Domae},
+      year={2024},
+      eprint={2410.23640},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2410.23640}, 
+  }</code></pre>
+  </div>
 </section>
-<!--End BibTex citation -->
 
-
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
