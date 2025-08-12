@@ -21,8 +21,112 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <style>
+    /* Enhanced readability styles */
+    body {
+      line-height: 1.7;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .publication-title {
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+    
+    .subtitle {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    
+    .teaser-image, .results-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+    }
+    
+    .section-divider {
+      border-top: 1px solid #e5e5e5;
+      margin: 3rem 0;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #363636;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+    }
+    
+    .back-to-top:hover {
+      background: #4a4a4a;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid #007bff;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .author-block {
+      margin-bottom: 0.5rem;
+    }
+    
+    .video-container {
+      margin-bottom: 2rem;
+    }
+    
+    .video-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #363636;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .publication-title {
+        font-size: 1.75rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation helper -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-body">
@@ -32,6 +136,13 @@
             <h1 class="title is-2 publication-title">
               Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers
             </h1>
+            
+            <div class="highlight-box">
+              <p class="is-size-6 has-text-weight-semibold">
+                🤖 <strong>BICT:</strong> A novel imitation learning architecture for coordinated bimanual robotic manipulation
+              </p>
+            </div>
+
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://tomohiromotoda.github.io/" target="_blank">Tomohiro Motoda</a><sup>*</sup>,
@@ -46,7 +157,7 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 National Institute of Advanced Industrial Science and Technology (AIST)<br>
-                <em>Under Review</em>
+                <em>IEEE CASE 2025 Accepted</em>
               </span>
               <span class="eql-cntrb">
                 <small><br><sup>*</sup>Corresponding Author</small>
@@ -81,17 +192,21 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <!-- Teaser Section -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="./static/img/2025-arXiv-top.png" alt="BICT Overview" class="teaser-image"/>
+        <img src="./static/img/2025-case-top.png" alt="BICT Overview" class="teaser-image"/>
         <h2 class="subtitle has-text-centered">
           <strong>BICT</strong> learns coordinated bimanual manipulation through action chunking and inter-arm coordination with transformers, enabling robots to perform dexterous tasks requiring synchronized dual-arm movements.
         </h2>
       </div>
     </div>
   </section>
+
+  <div class="section-divider"></div>
 
   <!-- Abstract Section -->
   <section class="section hero is-light">
@@ -100,8 +215,22 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
+            <div class="highlight-box">
+              <p><strong>Challenge:</strong> Coordinated bimanual movements with high degrees of freedom</p>
+              <p><strong>Solution:</strong> BICT with Inter-Arm Coordinated transformer Encoder (IACE)</p>
+              <p><strong>Result:</strong> High success rates in distinctive bimanual manipulation tasks</p>
+            </div>
             <p>
-              Robots that can operate autonomously in a human living environment are necessary to have the ability to handle various tasks flexibly. One crucial element is coordinated bimanual movements that enable functions that are difficult to perform with one hand alone. In recent years, learning-based models that focus on the possibilities of bimanual movements have been proposed. However, the high degree of freedom of the robot makes it challenging to reason about control, and the left and right robot arms need to adjust their actions depending on the situation, making it difficult to realize more dexterous tasks. To address the issue, we focus on coordination and efficiency between both arms, particularly for synchronized actions. Therefore, we propose a novel imitation learning architecture that predicts cooperative actions. We differentiate the architecture for both arms and add an intermediate encoder layer, Inter-Arm Coordinated transformer Encoder (IACE), that facilitates synchronization and temporal alignment to ensure smooth and coordinated actions. To verify the effectiveness of our architectures, we perform distinctive bimanual tasks. The experimental results showed that our model demonstrated a high success rate for comparison and suggested a suitable architecture for the policy learning of bimanual manipulation.
+              Robots that can operate autonomously in a human living environment are necessary to have the ability to handle various tasks flexibly. One crucial element is coordinated bimanual movements that enable functions that are difficult to perform with one hand alone.
+            </p>
+            <p>
+              In recent years, learning-based models that focus on the possibilities of bimanual movements have been proposed. However, the high degree of freedom of the robot makes it challenging to reason about control, and the left and right robot arms need to adjust their actions depending on the situation, making it difficult to realize more dexterous tasks.
+            </p>
+            <p>
+              To address the issue, we focus on coordination and efficiency between both arms, particularly for synchronized actions. Therefore, we propose a novel imitation learning architecture that predicts cooperative actions. We differentiate the architecture for both arms and add an intermediate encoder layer, Inter-Arm Coordinated transformer Encoder (IACE), that facilitates synchronization and temporal alignment to ensure smooth and coordinated actions.
+            </p>
+            <p>
+              To verify the effectiveness of our architectures, we perform distinctive bimanual tasks. The experimental results showed that our model demonstrated a high success rate for comparison and suggested a suitable architecture for the policy learning of bimanual manipulation.
             </p>
           </div>
         </div>
@@ -109,95 +238,120 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
+  <!-- Architectures Section -->
+  <section class="section hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">Architecture Overview</h2>
+        <div class="has-text-centered">
+          <img src="static/img/2025-arXiv-top.png" alt="BICT Architecture" class="results-image"/>
+        </div>
+        <div class="highlight-box">
+          <p class="has-text-justified">
+            <strong>Key Innovation:</strong> Our Inter-Arm Coordinated transformer Encoder (IACE) enables seamless coordination between dual robot arms by facilitating synchronization and temporal alignment for smooth bimanual manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- Experimental Results Section -->
   <section class="section hero is-small is-light">
     <div class="hero-body">
       <div class="container is-max-desktop content">
-        <h2 class="title is-3">Experimental Results</h2>
+        <h2 class="title is-3 has-text-centered">Experimental Results</h2>
         <div class="has-text-centered">
           <img src="static/img/2025-arXiv-result.png" alt="Experimental Results" class="results-image"/>
         </div>
         <p class="has-text-justified">
-          Our experimental evaluation demonstrates the effectiveness of BICT across various bimanual manipulation tasks, showing significant improvements in success rates compared to baseline methods.
+          Our experimental evaluation demonstrates the effectiveness of BICT across various bimanual manipulation tasks, showing significant improvements in success rates compared to baseline methods. The results validate our approach to coordinated bimanual learning.
         </p>
       </div>
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <!-- Video Results Sections -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Single Decoder Results</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/single_lift_board.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        <h2 class="title is-3 has-text-centered">Demonstration Videos</h2>
+        
+        <div class="video-container">
+          <h3 class="title is-4 video-title">Single Decoder Results</h3>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/single_lift_board.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/single_lift_towel.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/single_open_lid.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/single_open_toolbox.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/single_lift_towel.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/single_open_lid.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/single_open_toolbox.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        </div>
+
+        <div class="video-container">
+          <h3 class="title is-4 video-title">Split Decoders Results</h3>
+          <div class="carousel results-carousel">
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/split_lift_board.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/split_lift_towel.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/split_open_lid.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="item">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="static/video/split_open_toolbox.compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Split Decoders Results</h2>
-        <div class="carousel results-carousel">
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/split_lift_board.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/split_lift_towel.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/split_open_lid.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop height="100%">
-              <source src="static/video/split_open_toolbox.compressed.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="section-divider"></div>
 
   <!-- Citation Section -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{motoda2025learningbimanualmanipulationaction,
+      <pre><code>@misc{motoda2025lbict,
   title={Learning Bimanual Manipulation via Action Chunking and Inter-Arm Coordination with Transformers}, 
   author={Tomohiro Motoda and Ryo Hanai and Ryoichi Nakajo and Masaki Murooka and Floris Erich and Yukiyasu Domae},
   year={2025},
@@ -233,5 +387,23 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script>
+    // Back to top functionality
+    window.addEventListener('scroll', function() {
+      const backToTop = document.getElementById('backToTop');
+      if (window.pageYOffset > 100) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    document.getElementById('backToTop').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
