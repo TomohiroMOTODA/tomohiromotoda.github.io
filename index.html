@@ -568,42 +568,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-// アイコンの回転アニメーション（Bootstrap 3/4対応）
-$(document).ready(function() {
-    $('#domesticConferences').on('show.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(90deg)');
-    });
-    
-    $('#domesticConferences').on('hide.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(0deg)');
-    });
-    
-    // Bootstrap 3の場合のフォールバック
-    $('#domesticConferences').on('shown.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(90deg)');
-    });
-    
-    $('#domesticConferences').on('hidden.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(0deg)');
-    });
-});
-</script>
-</body>
-</html>
-            <p class="text-center mb-0 pt-3 pb-3">&copy; Motoda Homepage All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<!-- javascript はここから -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/script.js"></script>
 <script>
 // アイコンの回転アニメーション（Bootstrap 3/4対応）
 $(document).ready(function() {
